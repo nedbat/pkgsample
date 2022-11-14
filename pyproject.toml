@@ -1,0 +1,78 @@
+# This file configures the project for packaging, and can also hold other
+# tools' configuration settings.
+#
+# More details about what can go in this file:
+# https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html
+
+[project]
+# This is the basic information about your project.  Change the details here
+# to be about your project instead of "pkgsample".
+name = "pkgsample"
+description = "An example package demonstrating how to make one"
+
+# You can change this to README.md if you prefer.
+readme = "README.rst"   
+
+# Put your own name and email address here. You can also add more authors.
+authors = [
+    {name = "Ned Example", email = "ned@example.com"},
+]
+
+# You can choose a different license: https://choosealicense.com/
+# If you do, update the License classifier below.
+license.file = "LICENSE.txt"
+
+# Classifiers for your package. PyPI displays these on its page.
+# See https://pypi.org/classifiers/ for all of the possibilities.
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+
+# This is the minimum version of Python that pip will install your package on.
+requires-python = ">= 3.9"
+
+# List your needed third-party libraries, if you have any.
+dependencies = [
+    "rich",
+]
+
+# State that the version will be defined dynamically below.
+dynamic = ["version"]
+
+[project.urls]
+# These URLs are displayed in a sidebar on PyPI. You don't have to have them,
+# but they can help people learn more about your project. You can include as
+# many named URLs as you want.
+"Source code" = "https://github.com/nedbat/pkgsample"
+"Issue tracker" = "https://github.com/nedbat/pkgsample/issues"
+
+[project.scripts]
+# COMMANDS: These are commands you are installing.  Omit this section if you 
+# have no commands.  The names of the settings are the command names.
+# The values are a string in the form "module.to.import:function_to_run".
+
+# The 'pkgsample_add' command will run the function add_main() in the 
+# src/pkgsample/add_cli.py file.
+pkgsample_add = "pkgsample.add_cli:add_main"
+pkgsample_speech = "pkgsample.speech_cli:speech_main"
+
+[tool.setuptools.package-data]
+# DATAFILES: here is where you specify what data files to include in the
+# distribution.
+pkgsample = [
+    "speeches/*.txt",
+]
+
+[tool.setuptools.dynamic]
+# The version number will be read from __version__ in src/pkgsample/__init__.py
+version.attr = "pkgsample.__version__"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"

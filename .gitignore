@@ -1,0 +1,9 @@
+# Files that will not be saved by git.  You might need to add more things here.
+# GitHub has a collection of extensive examples: https://github.com/github/gitignore
+
+*.pyc
+*.pyo
+
+*.egg-info/
+build/
+dist/
