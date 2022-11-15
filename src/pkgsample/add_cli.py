@@ -5,6 +5,13 @@ import sys
 
 import rich
 
+# This file and function are mentioned in pyproject.toml in the
+# [project.scripts] section, like this:
+#
+#   [project.scripts]
+#   pkgsample_add = "pkgsample.add_cli:add_main"
+#
+
 def add_main():
     """Add together the numbers on the command line."""
     nums = [int(a) for a in sys.argv[1:]]

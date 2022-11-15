@@ -11,7 +11,7 @@ name = "pkgsample"
 description = "An example package demonstrating how to make one"
 
 # You can change this to README.md if you prefer.
-readme = "README.rst"   
+readme = "README.rst"
 
 # Put your own name and email address here. You can also add more authors.
 authors = [
@@ -19,8 +19,9 @@ authors = [
 ]
 
 # You can choose a different license: https://choosealicense.com/
-# If you do, update the License classifier below.
-license.file = "LICENSE.txt"
+# If you do, update the License classifier below, and put the correct text into
+# your LICENSE.txt file.
+license.text = "Apache-2.0"
 
 # Classifiers for your package. PyPI displays these on its page.
 # See https://pypi.org/classifiers/ for all of the possibilities.
@@ -35,9 +36,12 @@ classifiers = [
 ]
 
 # This is the minimum version of Python that pip will install your package on.
+# An overview of Python versions, their features and their lifecycle time frames
+# is at https://nedbatchelder.com/text/which-py.html.
 requires-python = ">= 3.9"
 
-# List your needed third-party libraries, if you have any.
+# List your needed third-party libraries, if you have any.  "rich" is here as an
+# example.  Your list will be completely different.
 dependencies = [
     "rich",
 ]
@@ -48,19 +52,18 @@ dynamic = ["version"]
 [project.urls]
 # These URLs are displayed in a sidebar on PyPI. You don't have to have them,
 # but they can help people learn more about your project. You can include as
-# many named URLs as you want.
+# many named URLs as you want.  They can be any URL, not just to GitHub.
 "Source code" = "https://github.com/nedbat/pkgsample"
 "Issue tracker" = "https://github.com/nedbat/pkgsample/issues"
 
 [project.scripts]
-# COMMANDS: These are commands you are installing.  Omit this section if you 
+# COMMANDS: These are commands you are installing.  Omit this section if you
 # have no commands.  The names of the settings are the command names.
 # The values are a string in the form "module.to.import:function_to_run".
 
-# The 'pkgsample_add' command will run the function add_main() in the 
+# The 'pkgsample_add' command will run the function add_main() in the
 # src/pkgsample/add_cli.py file.
 pkgsample_add = "pkgsample.add_cli:add_main"
-pkgsample_speech = "pkgsample.speech_cli:speech_main"
 
 [tool.setuptools.dynamic]
 # The version number will be read from __version__ in src/pkgsample/__init__.py
