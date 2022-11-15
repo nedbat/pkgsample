@@ -47,17 +47,13 @@ Optional features
 .................
 
 This layout will install your modules so that people can import them.  There
-are also two extra possibilities included. The parts that support these options
-are marked with special comments.
+is also an extra possibilities included:
 
 - You might have commands you need to install so that people have new
   command-line tools. These parts are marked with ``COMMANDS:``.
 
-- You might have non-Python data files you need to install. These parts are
-  marked with ``DATAFILES:``.
-
-Keep an eye as you look through the files to understand what you can omit if
-you don't need these options.
+Keep an eye out as you look through the files to understand what you can omit
+if you don't need this option.
 
 
 What's in the repo

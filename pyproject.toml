@@ -62,13 +62,6 @@ dynamic = ["version"]
 pkgsample_add = "pkgsample.add_cli:add_main"
 pkgsample_speech = "pkgsample.speech_cli:speech_main"
 
-[tool.setuptools.package-data]
-# DATAFILES: here is where you specify what data files to include in the
-# distribution.
-pkgsample = [
-    "speeches/*.txt",
-]
-
 [tool.setuptools.dynamic]
 # The version number will be read from __version__ in src/pkgsample/__init__.py
 version.attr = "pkgsample.__version__"
