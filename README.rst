@@ -8,7 +8,11 @@ pkgsample
 This is an example demonstrating how to package your code for distribution on
 PyPI.  It is **one possible way** to do it in the fall of 2022.  I am not going
 to discuss other ways it could be done. The packaging ecosystem is complex.
-Talking about all the options just confuses things.
+Talking about all the options just confuses things.  If you want to know more
+about how this page came to be, read the blog post: `One way to package Python
+code right now`__.
+
+__ https://nedbatchelder.com/blog/202211/one_way_to_package_python_code_right_now.html
 
 This repo isn't meant to show all of the configuration in a typical project.
 For example, it has no tests, it has no docs, it doesn't use linters or type
@@ -18,15 +22,18 @@ good things so we can focus on the packaging.
 
 The files in this repo have comments throughout, to help you understand what
 does what, so that you can create your own files with the parts and the details
-that you need.
+that you need. Aside from your own source files, there's really only one file
+to worry about.
 
 
 How to use this repo
 ====================
 
-You have code you want to distribute.  This repo is a model of how you can
-configure your project.  Make a copy of the files here, take the parts that you
-need, and leave out the parts you don't.
+This repo is a model of how you can configure your project to create
+installable packages.  You don't have to copy this whole repo.  You can copy
+individual files, because there are only a few you need.  Make a copy of a
+file, take the parts that you need, leave out the parts you don't, and edit the
+details to match your project.
 
 
 Decisions
