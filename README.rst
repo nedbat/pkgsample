@@ -1,3 +1,14 @@
+**Note** Since writing this example, I've discovered that the `Python Packaging
+User Guide tutorial`__ is good and serves the same purpose, so you should
+use it.
+
+__ https://packaging.python.org/en/latest/tutorials/packaging-projects/
+
+I learned things writing this example, so it wasn't wasted effort.  It's here
+if you find it helpful.  Carry on.
+
+-----
+
 #########
 pkgsample
 #########
@@ -82,7 +93,7 @@ There are other details that you might want to change, but you don't have to:
 - License: this repo uses the Apache license, but you can choose a different
   one.
 
-- Minimum Python version: this repo required Python 3.9 or greater. Perhaps you
+- Minimum Python version: this repo requires Python 3.9 or greater. Perhaps you
   need to support more versions (choose a lower requirement) or you want to use
   some newer Python features (choose a higher requirement).
 
