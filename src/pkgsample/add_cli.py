@@ -5,6 +5,8 @@ import sys
 
 import rich
 
+from .add import add
+
 # This file and function are mentioned in pyproject.toml in the
 # [project.scripts] section, like this:
 #
@@ -17,5 +19,8 @@ def add_main():
     nums = [int(a) for a in sys.argv[1:]]
     rich.print(f"Your numbers are: [bold]{nums}[/bold]")
 
-    total = sum(nums)
+    total = 0
+    for num in nums:
+        total = add(total, num)
+
     rich.print(f"They add up to: [bold]{total}[/bold]")
