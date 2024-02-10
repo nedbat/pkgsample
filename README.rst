@@ -23,7 +23,7 @@ Talking about all the options just confuses things.  If you want to know more
 about how this page came to be, read the blog post: `One way to package Python
 code right now`__.
 
-__ https://nedbatchelder.com/blog/202211/one_way_to_package_python_code_right_now.html
+__ https://nedbatchelder.com/blog/202402/one_way_to_package_python_code_right_now.html
 
 This repo isn't meant to show all of the configuration in a typical project.
 For example, it has no tests, it has no docs, it doesn't use linters or type
