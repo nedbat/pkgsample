@@ -132,6 +132,9 @@ README.rst
 your project, how to install it, how to use it, how to get help, the
 `changelog`_, and so on.
 
+If you prefer Markdown, make a README.md instead, and change the ``readme``
+line in pyproject.toml.
+
 Bits and bobs
 -------------
 
