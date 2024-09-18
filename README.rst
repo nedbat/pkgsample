@@ -308,8 +308,7 @@ Create accounts
 ---------------
 
 Register two PyPI accounts, at both https://pypi.org/account/register/ and
-https://test.pypi.org/account/register/.  PyPI has a number of options to keep
-your account secure, but a simple username and password will get you started.
+https://test.pypi.org/account/register/.
 
 Upload a test
 -------------
