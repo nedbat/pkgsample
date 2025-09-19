@@ -70,5 +70,5 @@ pkgsample_add = "pkgsample.add_cli:add_main"
 version.attr = "pkgsample.__version__"
 
 [build-system]
-requires = ["setuptools"]
+requires = ["setuptools>=80"]
 build-backend = "setuptools.build_meta"
