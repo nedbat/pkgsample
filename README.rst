@@ -1,4 +1,4 @@
-| |sponsor| |bluesky-nedbat| |mastodon-nedbat|
+| |sponsor| |mastodon-nedbat|
 
 **Note** Since writing this example, I've discovered that the `Python Packaging
 User Guide tutorial`__ is good and serves the same purpose, so you should
@@ -388,9 +388,6 @@ You did it!
 .. |mastodon-nedbat| image:: https://img.shields.io/badge/dynamic/json?style=flat&labelColor=450657&logo=mastodon&logoColor=ffffff&label=@nedbat&query=followers_count&url=https%3A%2F%2Fhachyderm.io%2Fapi%2Fv1%2Faccounts%2Flookup%3Facct=nedbat
     :target: https://hachyderm.io/@nedbat
     :alt: nedbat on Mastodon
-.. |bluesky-nedbat| image:: https://img.shields.io/badge/dynamic/json?style=flat&color=96a3b0&labelColor=3686f7&logo=icloud&logoColor=white&label=@nedbat&url=https%3A%2F%2Fpublic.api.bsky.app%2Fxrpc%2Fapp.bsky.actor.getProfile%3Factor=nedbat.com&query=followersCount
-    :target: https://bsky.app/profile/nedbat.com
-    :alt: nedbat on Bluesky
 .. |sponsor| image:: https://img.shields.io/badge/%E2%9D%A4-Sponsor%20me-brightgreen?style=flat&logo=GitHub
     :target: https://github.com/sponsors/nedbat
     :alt: Sponsor me on GitHub
