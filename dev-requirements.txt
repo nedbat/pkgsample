@@ -2,4 +2,5 @@
 # These will not be installed when someone else installs your project.
 
 build
+pytest      # TESTS: only if you have tests to run.
 twine

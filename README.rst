@@ -19,24 +19,24 @@ pkgsample
 .. You will replace it with your own file.
 
 This is an example demonstrating how to package your code for distribution on
-PyPI.  It is **one possible way** to do it in the fall of 2022.  I am not going
-to discuss other ways it could be done. The packaging ecosystem is complex.
-Talking about all the options just confuses things.  If you want to know more
-about how this page came to be, read the blog post: `One way to package Python
-code right now`__.
+PyPI.  It was **one possible way** to do it in the fall of 2022, and it still
+works in the summer of 2026.  I am not going to discuss other ways it could be
+done. The packaging ecosystem is complex.  Talking about all the options just
+confuses things.  If you want to know more about how this page came to be, read
+the blog post: `One way to package Python code right now`__.
 
 __ https://nedbatchelder.com/blog/202402/one_way_to_package_python_code_right_now.html
 
 This repo isn't meant to show all of the configuration in a typical project.
-For example, it has no tests, it has no docs, it doesn't use linters or type
-checkers.  Those are good things, you should look into them, but this repo is
-only about packaging a project for distribution, and leaves out those other
-good things so we can focus on the packaging.
+For example, it has no docs, it doesn't use linters or type checkers.  Those
+are good things, you should look into them. This repo is about packaging a
+project for distribution, and leaves out other good things so we can focus on
+the packaging.
 
-The files in this repo have comments throughout, to help you understand what
+The files in this repo have comments throughout to help you understand what
 does what, so that you can create your own files with the parts and the details
 that you need. Aside from your own source files, there's really only one file
-to worry about.
+to worry about: pyproject.toml.
 
 
 How to use this repo
@@ -79,13 +79,15 @@ Optional features
 .................
 
 This layout will install your modules so that people can import them.  There
-is also an extra possibility included:
+are two extra possibilities included:
 
 - You might have commands you need to install so that your users have new
   command-line tools. These parts are marked with ``COMMANDS:``.
 
+- You might have automated tests. These parts are marked with ``TESTS:``.
+
 Keep an eye out as you look through the files to understand what you can omit
-if you don't need this option.
+if you don't need those options.
 
 Project details
 ...............
@@ -137,6 +139,11 @@ your project, how to install it, how to use it, how to get help, the
 If you prefer Markdown, make a README.md instead, and change the ``readme``
 line in pyproject.toml.
 
+tests/
+------
+
+If you want, you can write automated tests. They will go in this directory.
+
 Bits and bobs
 -------------
 
@@ -182,10 +189,14 @@ Copy the files from this repo, then make all your changes:
   all traces of the pkgsample code.
 
 - Update the pyproject.toml file with all your chosen details.  The word
-  "pkgsample" shouldn't appear in it at all when you are done.
+  "pkgsample" shouldn't appear anywhere in the file or the entire project when
+  you are done.
 
-- Completely re-write the README.rst file with the description and details of
-  your project.
+- If you are writing tests, remove tests/test_add.py and create your own
+  test_something.py files in that directory.
+
+- Completely re-write this README.rst file with the description and details of
+  your project. If you like, you can replace this file with a README.md file.
 
 
 Install locally
@@ -195,6 +206,7 @@ You can do some preliminary testing of your project by installing it as an
 "editable install" in your current environment::
 
     python -m pip install -e .
+    # or:  make tools
 
 This will make your project importable in your current Python, and you can try
 running your code.  Here's an example using the pkgsample code::
@@ -214,6 +226,20 @@ If you are creating command-line commands, you will be able to run them now::
 By the way, an editable install like this is also a good way to do development,
 because Python will import directly from the files you are editing in your
 working tree, so it's quick to make changes and see their effect.
+
+If you are writing tests, you can run them with::
+
+    % python -m pytest
+    # or:  make test
+    ======================== test session starts =========================
+    platform darwin -- Python 3.11.15, pytest-9.1.1, pluggy-1.6.0
+    rootdir: /Users/user/pkgsample
+    configfile: pyproject.toml
+    collected 1 item
+
+    tests/test_add.py .                                            [100%]
+
+    ========================= 1 passed in 0.00s ==========================
 
 Once you do this, you will start seeing ``__pycache__`` directories near your
 code.  These contain compiled bytecode files, named something.something.pyc.
@@ -267,6 +293,8 @@ examine the contents::
     -rw-r--r--  0 user group     113 Nov 15 06:25 pkgsample-0.1.0/src/pkgsample.egg-info/entry_points.txt
     -rw-r--r--  0 user group       5 Nov 15 06:25 pkgsample-0.1.0/src/pkgsample.egg-info/requires.txt
     -rw-r--r--  0 user group      10 Nov 15 06:25 pkgsample-0.1.0/src/pkgsample.egg-info/top_level.txt
+    drwxr-xr-x  0 user group       0 Nov 15 07:34 pkgsample-0.1.1/tests/
+    -rw-r--r--  0 user group     236 Nov 15 07:17 pkgsample-0.1.1/tests/test_add.py
 
 The distribution includes all of your files, and also new supporting files made
 as part of the packaging process.

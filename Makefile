@@ -1,12 +1,12 @@
 # A Makefile is not required, but can be helpful for organizing the actions
 # needed when working on a project.
 
-.PHONY: help clean tools dist test_pypi pypi
+.PHONY: help clean tools test dist test_pypi pypi
 
 .DEFAULT_GOAL := help
 
 help: 	## Display this help message.
-	@echo "Please use \`make <target>' where <target> is one of:"
+	@echo "Use 'make <target>' where <target> is one of:"
 	@awk -F ':.*?## ' '/^[a-zA-Z]/ && NF==2 {printf "  %-20s %s\n", $$1, $$2}' $(MAKEFILE_LIST) | sort
 
 clean: 	## Remove stuff we don't need.
@@ -17,6 +17,10 @@ clean: 	## Remove stuff we don't need.
 
 tools:	## Install the development tools.
 	python -m pip install -r dev-requirements.txt
+	pyrhon -m pip install -e .
+
+test:	## Run the tests.
+	python -m pytest
 
 dist: 	## Build the distributions.
 	python -m build --sdist --wheel

@@ -1,4 +1,4 @@
-# COMMANDS. An example of a function to run as a command-line command.
+# COMMANDS: An example of a function to run as a command-line command.
 # If you aren't providing a command, you don't need this file.
 
 import sys
