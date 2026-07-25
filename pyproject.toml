@@ -29,16 +29,16 @@ classifiers = [
     "Development Status :: 2 - Pre-Alpha",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
 ]
 
 # This is the minimum version of Python that pip will install your package on.
 # An overview of Python versions, their features and their lifecycle time frames
 # is at https://nedbatchelder.com/text/which-py.html.
-requires-python = ">= 3.9"
+requires-python = ">= 3.11"
 
 # List your needed third-party libraries, if you have any.  "rich" is here as an
 # example.  Your list will be completely different.

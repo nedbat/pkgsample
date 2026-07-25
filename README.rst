@@ -95,9 +95,9 @@ There are other details that you might want to change, but you don't have to:
 - License: this repo uses the Apache license, but you can choose a different
   one.
 
-- Minimum Python version: this repo requires Python 3.9 or greater. Perhaps you
-  need to support more versions (choose a lower requirement) or you want to use
-  some newer Python features (choose a higher requirement).
+- Minimum Python version: this repo requires Python 3.11 or greater. Perhaps
+  you need to support more versions (choose a lower requirement) or you want to
+  use some newer Python features (choose a higher requirement).
 
 Comments throughout the files, especially in pyproject.toml show where to make
 these choices, and link to resources that can help.
@@ -159,7 +159,7 @@ me in this repo, and you might find useful also:
 Preparing your environment
 ==========================
 
-Get yourself a Python 3.9 environment.  Using a `virtualenv`_ is recommended
+Get yourself a Python 3.11 environment.  Using a `virtualenv`_ is recommended
 but not required.
 
 You'll need a few tools to build the installable files (called distributions).
@@ -200,7 +200,7 @@ This will make your project importable in your current Python, and you can try
 running your code.  Here's an example using the pkgsample code::
 
     % python
-    Python 3.9.15 (main, Oct 24 2022, 17:23:01)
+    Python 3.11.15 (main, Jun 24 2026, 08:00:22)
     >>> from pkgsample.add import add
     >>> add(17, 42)
     59
