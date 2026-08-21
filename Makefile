@@ -17,7 +17,7 @@ clean: 	## Remove stuff we don't need.
 
 tools:	## Install the development tools.
 	python -m pip install -r dev-requirements.txt
-	pyrhon -m pip install -e .
+	python -m pip install -e .
 
 test:	## Run the tests.
 	python -m pytest
