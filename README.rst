@@ -258,7 +258,7 @@ Create the files
 These commands will make the files and check them for correctness::
 
     python -m build --sdist --wheel
-	python -m twine check dist/*
+    python -m twine check dist/*
     # or:  make clean dist
 
 If all went well, you will now have a dist/ directory with two files::
